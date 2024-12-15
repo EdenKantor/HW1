@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Welcome to WebFitPro</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+</head>
+<body class="bg-white text-black dark:bg-gray-900 dark:text-white transition-all duration-300">
+
+  <!-- Top Bar -->
+  <div class="flex justify-end items-center p-4 border-b border-gray-200 dark:border-gray-700">
+    <button id="toggle-theme" class="px-4 py-2 bg-green-400 text-white rounded-lg hover:bg-green-500">
+      <i class="fas fa-paint-brush mr-2"></i>Toggle Theme
+    </button>
+  </div>
+
+  <!-- Main Content -->
+  <div class="flex justify-center items-center min-h-screen flex-col space-y-6 px-4">
+    <!-- Logo -->
+    <img src="WebFitPro.jpeg" alt="WebFitPro Logo" class="w-250 h-250 object-contain max-w-full dark:hidden">
+    <img src="WebFitProDarkMode.jpeg" alt="WebFitPro Dark Logo" class="w-250 h-250 object-contain max-w-full hidden dark:block">
+
+    <!-- Welcome Text -->
+    <p class="text-2xl font-bold text-gray-700 text-center dark:text-white transition-colors">
+      Your ultimate platform for personalized fitness and wellness journeys.
+    </p>
+
+    <!-- Buttons for Login and Registration -->
+    <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4 w-full justify-center">
+      <a href="Login.html">
+        <button class="px-12 py-4 bg-green-500 text-white text-lg rounded-lg hover:bg-green-600 w-full sm:w-auto">
+          <i class="fas fa-sign-in-alt mr-2"></i>Login
+        </button>
+      </a>
+      <a href="RegGender.html">
+        <button class="px-12 py-4 bg-green-500 text-white text-lg rounded-lg hover:bg-green-600 w-full sm:w-auto">
+          <i class="fas fa-user-plus mr-2"></i>Register
+        </button>
+      </a>
+    </div>
+  </div>
+<!-- External JS file -->
+<script src="IndexLogic.js"></script>
+
+</body>
+</html>

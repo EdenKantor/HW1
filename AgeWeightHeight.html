@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>User Information</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+  <style>
+    .error-message {
+      color: red;
+      font-size: 0.875rem;
+      display: none;
+    }
+  </style>
+</head>
+<body class="bg-white text-black dark:bg-gray-900 dark:text-white transition-all duration-300">
+
+   <!-- Top Bar -->
+   <div class="flex justify-between items-center p-4 border-b border-gray-200 dark:border-gray-700">
+    <!-- Back Button -->
+    <a href="RegGender.html" class="text-lg text-green-500 hover:text-green-700 dark:text-green-400 dark:hover:text-green-300 flex items-center space-x-2">
+      <i class="fas fa-arrow-left"></i>
+      <span>Back</span>
+    </a>
+
+    <!-- Theme Change Button -->
+    <button id="toggle-theme" class="px-4 py-2 bg-green-400 text-white rounded-lg hover:bg-green-500 dark:bg-green-600 dark:hover:bg-green-500">
+      <i class="fas fa-paint-brush mr-2"></i>Toggle Theme
+    </button>
+  </div>
+
+  <!-- Main Content -->
+  <div class="flex flex-col items-center min-h-screen space-y-8 p-6">
+    <!-- Title and Explanation -->
+    <h1 class="text-4xl font-extrabold text-center dark:text-white">Please Enter Your Information</h1>
+    <p class="text-lg text-center text-gray-600 dark:text-gray-300">No need to be shy.</p>
+
+    <!-- Form Fields -->
+    <div class="w-full max-w-sm space-y-4">
+      <label class="block text-lg dark:text-gray-200">Age</label>
+      <input type="number" id="age" class="w-full px-4 py-2 border rounded-lg dark:bg-gray-800 dark:border-gray-600 dark:text-white" placeholder="Enter your age">
+      <p id="age-error" class="error-message dark:text-red-400">Please enter a valid age.</p>
+
+      <label class="block text-lg dark:text-gray-200">Height (cm)</label>
+      <input type="number" id="height" class="w-full px-4 py-2 border rounded-lg dark:bg-gray-800 dark:border-gray-600 dark:text-white" placeholder="Enter your height">
+      <p id="height-error" class="error-message dark:text-red-400">Please enter a valid height.</p>
+
+      <label class="block text-lg dark:text-gray-200">Weight (kg)</label>
+      <input type="number" id="weight" class="w-full px-4 py-2 border rounded-lg dark:bg-gray-800 dark:border-gray-600 dark:text-white" placeholder="Enter your weight">
+      <p id="weight-error" class="error-message dark:text-red-400">Please enter a valid weight.</p>
+    </div>
+
+    <!-- Navigation Button -->
+    <div class="mt-6">
+      <button id="next-btn" class="px-6 py-2 bg-green-400 text-white rounded-lg hover:bg-green-500 dark:bg-green-600 dark:hover:bg-green-500" onclick="validateAndProceed()">
+        Next<i class="fas fa-arrow-right ml-2"></i>
+      </button>
+    </div>
+  </div>
+
+  <!-- Link the external JS file -->
+  <script src="AgeWeightHeightLogic.js"></script>
+
+
+</body>
+</html>

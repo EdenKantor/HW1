@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home Page</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+</head>
+<body class="transition-all duration-300 bg-white dark:bg-gray-900" id="body">
+
+  <!-- Top Bar -->
+  <div class="flex justify-between items-center p-4 border-b border-gray-200 dark:border-gray-600 dark:bg-gray-900">
+    <a href="login.html" class="text-lg text-green-500 hover:text-green-700 flex items-center space-x-2">
+      <i class="fas fa-sign-out-alt mr-2"></i>Logout
+    </a>
+
+    <!-- Theme Change Button -->
+    <button id="toggle-theme" class="px-4 py-2 bg-green-400 text-white rounded-lg hover:bg-green-500">
+      <i class="fas fa-paint-brush mr-2"></i>Toggle Theme
+    </button>
+  </div>
+
+  <!-- Main Content Area -->
+  <div class="flex flex-col items-center min-h-screen space-y-6 p-4 mt-[-20] dark:bg-black-900">
+
+    <!-- Welcome Message -->
+    <div class="text-center space-y-6">
+      <h1 class="text-3xl font-extrabold text-green-600 dark:text-green-400">HELLO USER!</h1>
+      <p class="text-3xl italic mt-4 text-green-700 dark:text-white">
+        <span id="michael-quote" class="font-semibold text-xl text-green-600">"Some people want it to happen, some wish it would happen, others make it happen."</span>
+        <br>
+        <span class="text-base text-black dark:text-white">- Micheal Jordan</span>
+      </p>
+    </div>
+
+    <!-- Spacer between the text and middle buttons -->
+    <div class="mt-10"></div>
+
+    <!-- Action Buttons -->
+    <div class="flex flex-col space-y-6 w-full max-w-sm">
+      <button class="px-10 py-6 bg-teal-200 text-white rounded-lg hover:bg-teal-300 text-2xl flex justify-between items-center" onclick="window.location.href='ContinueRoutine.html'">
+        <span>CONTINUE ROUTINE</span>
+        <i class="fas fa-dumbbell ml-3"></i>
+      </button>
+      <button class="px-10 py-6 bg-green-400 text-white rounded-lg hover:bg-green-500 text-2xl flex justify-between items-center" onclick="window.location.href='FocusArea.html'">
+        <span>DISCOVER</span>
+        <i class="fas fa-compass ml-3"></i>
+      </button>
+      <button class="px-10 py-6 bg-green-600 text-white rounded-lg hover:bg-green-700 text-2xl flex justify-between items-center" onclick="window.location.href='MyInfo.html'">
+        <span>MY INFO</span>
+        <i class="fas fa-smile ml-3"></i>
+      </button>
+    </div>
+  </div>
+
+  <!-- External JS file -->
+  <script src="HomePageLogic.js"></script>
+
+</body>
+</html>
